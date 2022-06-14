@@ -301,7 +301,7 @@ function Mint() {
         </StyledHeader>
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/example.gif"} />
+            <StyledImg alt={"example"} src={"/config/images/example.jpg"} />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
@@ -467,11 +467,7 @@ function Mint() {
           </s.Container>
           <s.SpacerLarge />
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg
-              alt={"example"}
-              src={"/config/images/example.gif"}
-              style={{ transform: "scaleX(-1)" }}
-            />
+            <StyledImg alt={"example"} src={"/config/images/example.jpg"} />
           </s.Container>
         </ResponsiveWrapper>
         <s.SpacerMedium />
