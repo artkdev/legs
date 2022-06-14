@@ -118,7 +118,7 @@ const StyledHeader = styled.div`
       width: 141px;
       height: 50px;
 
-      background: #38a035;
+      background: #f0d52d;
       box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15),
         inset 0px 2px 6px 1px rgba(255, 255, 255, 0.2);
       border-radius: 14px;
@@ -282,7 +282,7 @@ function Mint() {
                 /* identical to box height */ color: "#FFFFFF",
               }}
             >
-              Crypto-Apes
+              Bored Apes Legs Club
             </h1>
             <h2
               style={{

@@ -6,8 +6,8 @@
     "SYMBOL": "ETH",
     "ID": 1
   },
-  "NFT_NAME": "Crypto-Apes ArtClub",
-  "SYMBOL": "CryptoApesArtClub",
+  "NFT_NAME": "Bored Apes Legs Club",
+  "SYMBOL": "BALC",
   "MAX_SUPPLY": 10000,
   "WEI_COST": 100000000000000000,
   "DISPLAY_COST": 0.1,
