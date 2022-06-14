@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x26162eC22Bc9640e788d1dA064c604fC08077Fae",
+  "SCAN_LINK": "https://etherscan.io/address/0x26162ec22bc9640e788d1da064c604fc08077fae",
+  "NETWORK": {
+    "NAME": "Ethereum",
+    "SYMBOL": "ETH",
+    "ID": 1
+  },
+  "NFT_NAME": "Crypto-Apes ArtClub",
+  "SYMBOL": "CryptoApesArtClub",
+  "MAX_SUPPLY": 10000,
+  "WEI_COST": 100000000000000000,
+  "DISPLAY_COST": 0.1,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/boredapeslegsclub",
+  "SHOW_BACKGROUND": true
+}
