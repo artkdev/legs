@@ -93,6 +93,9 @@ const StyledSection = styled.div`
 
               color: #ffffff;
             }
+            a {
+              text-decoration: none;
+            }
           }
         }
       }
