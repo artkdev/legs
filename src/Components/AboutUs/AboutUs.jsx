@@ -276,10 +276,8 @@ export default function AboutUs() {
             over 200 hand drawn traits.
             <br />
             <br />
-            Bayc’s upper torso is already out there, but how the f*$% will they
-            walk on the otherside? We found the solution, we hand crafted a pair
-            of legs for every ape! Our goal is to have each ape owner have it’s
-            matching pair of legs.
+            10000 unique collectible Bored Apes Legs Club NFTs with proof of
+            ownership stored on the Ethereum blockchain.
           </div>
           <div className="info">
             <div className="block">
