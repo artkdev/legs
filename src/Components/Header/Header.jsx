@@ -180,17 +180,6 @@ export default function Header() {
           <Link
             className="nav"
             activeClass="active"
-            to="Section5"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            FAQ
-          </Link>
-          <Link
-            className="nav"
-            activeClass="active"
             to="Section6"
             spy={true}
             smooth={true}
