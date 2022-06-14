@@ -273,8 +273,10 @@ export default function AboutUs() {
             over 200 hand drawn traits.
             <br />
             <br />
-            There are 7 unique Bored Apes Legs Club NFTs that were created by
-            the artist and do not have randomly generated traits.
+            Bayc’s upper torso is already out there, but how the f*$% will they
+            walk on the otherside? We found the solution, we hand crafted a pair
+            of legs for every ape! Our goal is to have each ape owner have it’s
+            matching pair of legs.
           </div>
           <div className="info">
             <div className="block">

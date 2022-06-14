@@ -43,17 +43,12 @@ export default function SidePannel() {
       <div className="link">
         <img src={twitter} alt="" />
       </div>
-      <a
-        className="link"
-        href="https://discord.gg/xYEPS9Cv"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
+      <a className="link" href="" target="_blank" rel="noreferrer noopener">
         <img src={discord} alt="" />
       </a>
       <a
         className="link"
-        href="https://opensea.io/collection/cryptoapesartclub"
+        href="https://opensea.io/collection/boredapeslegsclub"
         target="_blank"
         rel="noreferrer noopener"
       >

@@ -478,9 +478,9 @@ function Mint() {
               color: "var(--primary-text)",
             }}
           >
-            Please make sure you are connected to the right network (
-            {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please note:
-            Once you make the purchase, you cannot undo this action.
+            Bayc’s upper torso is already out there, but how the f*$% will they
+            walk on the otherside? We found the solution, we hand crafted a pair
+            of legs for every ape!
           </s.TextDescription>
           <s.SpacerSmall />
           <s.TextDescription
@@ -489,9 +489,7 @@ function Mint() {
               color: "var(--primary-text)",
             }}
           >
-            We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
-            successfully mint your NFT. We recommend that you don't lower the
-            gas limit.
+            Our goal is to have each ape owner have it’s matching pair of legs.
           </s.TextDescription>
         </s.Container>
       </s.Container>

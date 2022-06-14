@@ -267,7 +267,7 @@ export default function Footer() {
               </div>
               <a
                 className="link"
-                href="https://discord.gg/xYEPS9Cv"
+                href="https://"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -275,7 +275,7 @@ export default function Footer() {
               </a>
               <a
                 className="link"
-                href="https://opensea.io/collection/cryptoapesartclub"
+                href="https://opensea.io/collection/boredapeslegsclub"
                 target="_blank"
                 rel="noreferrer noopener"
               >

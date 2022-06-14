@@ -275,10 +275,7 @@ export default function Roadmap() {
               <div className="bot">
                 <div className="text-tittle">Step by step</div>
 
-                <p>
-                  Mint close and transfer raised funds to the aid funds of
-                  ukraine.
-                </p>
+                <p>Reveal collection</p>
               </div>
             </div>
           </div>
@@ -291,7 +288,9 @@ export default function Roadmap() {
               <div className="top">Next step</div>
 
               <div className="bot">
-                <div className="text-tittle">Report</div>
+                <div className="text-tittle">
+                  Development of social networks
+                </div>
               </div>
             </div>
           </div>
