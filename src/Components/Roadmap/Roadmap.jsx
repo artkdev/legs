@@ -288,9 +288,7 @@ export default function Roadmap() {
               <div className="top">Next step</div>
 
               <div className="bot">
-                <div className="text-tittle">
-                  Development of social networks
-                </div>
+                <p>Development of social networks</p>
               </div>
             </div>
           </div>
