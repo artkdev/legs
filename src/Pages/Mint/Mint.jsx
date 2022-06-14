@@ -282,7 +282,7 @@ function Mint() {
                 /* identical to box height */ color: "#FFFFFF",
               }}
             >
-              Bored Apes Legs Club
+              Bored Ape Legs Club
             </h1>
             <h2
               style={{

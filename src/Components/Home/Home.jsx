@@ -421,7 +421,7 @@ export default function Home() {
           </div>
           <div className="rightBlock">
             <div className="textBlock">
-              <h2>Bored Apes Legs Club</h2>
+              <h2>Bored Ape Legs Club</h2>
               <p>
                 10000 unique collectible Bored Apes Legs Club NFTs with proof of
                 ownership stored on the Ethereum blockchain.

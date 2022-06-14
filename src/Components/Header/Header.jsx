@@ -130,7 +130,7 @@ export default function Header() {
           duration={500}
         >
           <img src={logo} alt="" />
-          <h1>Bored Apes Legs Club</h1>
+          <h1>Bored Ape Legs Club</h1>
         </Link>
         <nav>
           <Link
