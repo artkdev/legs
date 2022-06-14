@@ -89,6 +89,7 @@ const StyledSection = styled.div`
           }
         }
         .mint {
+          text-align: center;
           display: flex;
           flex-direction: row;
           border: none;
@@ -433,7 +434,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Mint
+              Mint the other half
             </Link>
           </div>
         </div>
