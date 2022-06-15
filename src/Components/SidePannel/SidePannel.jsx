@@ -40,10 +40,15 @@ const StyledSidePannel = styled.div`
 export default function SidePannel() {
   return (
     <StyledSidePannel>
-      <div className="link">
+      <a
+        className="link"
+        href="https://twitter.com/balc2022"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         <img src={twitter} alt="" />
-      </div>
-      <a className="link" href="" target="_blank" rel="noreferrer noopener">
+      </a>
+      <a className="link" href="/" target="_blank" rel="noreferrer noopener">
         <img src={discord} alt="" />
       </a>
       <a

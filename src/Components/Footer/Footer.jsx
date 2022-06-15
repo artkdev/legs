@@ -262,12 +262,17 @@ export default function Footer() {
               </a>
             </div>
             <div className="bot">
-              <div className="link">
-                <img src={twitter} alt="" />
-              </div>
               <a
                 className="link"
-                href="https://"
+                href="https://twitter.com/balc2022"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img src={twitter} alt="" />
+              </a>
+              <a
+                className="link"
+                href="/"
                 target="_blank"
                 rel="noreferrer noopener"
               >

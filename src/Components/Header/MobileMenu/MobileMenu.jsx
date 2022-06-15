@@ -141,9 +141,14 @@ export default function MobileMenu({ isOpened, delateSetOpen }) {
         </Link>
       </div>
       <div className="bot">
-        <div className="link">
+        <a
+          className="link"
+          href="https://twitter.com/balc2022"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <img src={twitter} alt="" />
-        </div>
+        </a>
         <a className="link" href="/" target="_blank" rel="noreferrer noopener">
           <img src={discord} alt="" />
         </a>
