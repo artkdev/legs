@@ -430,14 +430,22 @@ export default function Home() {
                 ape owner have it’s matching pair of legs.
               </p>
             </div>
-            <Link
+            {/* <Link
               className="mint"
               to="Mint"
               target="_blank"
               rel="noopener noreferrer"
             >
               Mint the other half
-            </Link>
+            </Link> */}
+            <div
+              className="mint"
+              to="Mint"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Free Mint coming soon
+            </div>
           </div>
         </div>
         {/* <div className='bot'>
