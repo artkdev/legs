@@ -18,11 +18,11 @@ function App() {
     <AppWrapper>
       <Routes>
         <Route exact path="" element={<MainPage ScrollToTop={ScrollToTop} />} />
-        {/* <Route
-					exact
-					path='/mint'
-					element={<Mint ScrollToTop={ScrollToTop} />}
-				/> */}
+        <Route
+          exact
+          path="/mint"
+          element={<Mint ScrollToTop={ScrollToTop} />}
+        />
         <Route
           path="*"
           element={

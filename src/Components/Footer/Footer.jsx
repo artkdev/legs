@@ -254,7 +254,7 @@ export default function Footer() {
               </Link>
               <a
                 className="contract"
-                href="https://polygonscan.com/address/0x17D7C9f83254176618ca90D99dB2E6f5209b062B"
+                href="https://etherscan.io/address/0x3AA36397519Ac7874b17C1DE91d84df8E11f1C87"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -280,7 +280,7 @@ export default function Footer() {
               </a>
               <a
                 className="link"
-                href="https://opensea.io/collection/boredapeslegsclub"
+                href="https://opensea.io/collection/boredapelegsclub"
                 target="_blank"
                 rel="noreferrer noopener"
               >

@@ -281,13 +281,14 @@ export default function AboutUs() {
           </div>
           <div className="info">
             <div className="block">
-              <img
-                src={Document}
-                alt="https://polygonscan.com/address/0x17D7C9f83254176618ca90D99dB2E6f5209b062B"
-              />
+              <img src={Document} alt="" />
               <div className="text">
                 <h4>Contract</h4>
-                <a href="https://etherscan.io/address/0x26162ec22bc9640e788d1da064c604fc08077fae">
+                <a
+                  href="https://etherscan.io/address/0x3AA36397519Ac7874b17C1DE91d84df8E11f1C87"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <p>View</p>
                 </a>
               </div>
@@ -303,14 +304,14 @@ export default function AboutUs() {
               <img src={Shopping} alt="" />
               <div className="text">
                 <h4>Price</h4>
-                <p>0.1 ETH</p>
+                <p>0 ETH!</p>
               </div>
             </div>
             <div className="block">
               <img src={Warning} alt="" />
               <div className="text">
                 <h4>Buyers Limit</h4>
-                <p>20</p>
+                <p>5</p>
               </div>
             </div>
           </div>

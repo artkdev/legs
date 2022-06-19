@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0x26162eC22Bc9640e788d1dA064c604fC08077Fae",
-  "SCAN_LINK": "https://etherscan.io/address/0x26162ec22bc9640e788d1da064c604fc08077fae",
+  "CONTRACT_ADDRESS": "0x3AA36397519Ac7874b17C1DE91d84df8E11f1C87",
+  "SCAN_LINK": "https://etherscan.io/address/0x3AA36397519Ac7874b17C1DE91d84df8E11f1C87",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
@@ -9,10 +9,10 @@
   "NFT_NAME": "Bored Ape Legs Club",
   "SYMBOL": "BALC",
   "MAX_SUPPLY": 10000,
-  "WEI_COST": 100000000000000000,
-  "DISPLAY_COST": 0.1,
+  "WEI_COST": 0,
+  "DISPLAY_COST": 0,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/boredapeslegsclub",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/boredapelegsclub",
   "SHOW_BACKGROUND": true
 }
