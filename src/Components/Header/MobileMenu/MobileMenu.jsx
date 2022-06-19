@@ -154,7 +154,7 @@ export default function MobileMenu({ isOpened, delateSetOpen }) {
         </a>
         <a
           className="link"
-          href="https://opensea.io/collection/boredapeslegsclub"
+          href="https://opensea.io/collection/boredapelegsclub"
           target="_blank"
           rel="noreferrer noopener"
         >
