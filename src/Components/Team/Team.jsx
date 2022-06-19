@@ -178,14 +178,7 @@ export default function Team() {
               </div>
             </div>
           </div>
-          <div className="card">
-            <img src={GINI} alt="" />
-            <div className="text">
-              <div className="link">
-                <h2>Kriscapelle</h2>
-              </div>
-            </div>
-          </div>
+
           <div className="card">
             <img src={img1} alt="" />
             <div className="text">

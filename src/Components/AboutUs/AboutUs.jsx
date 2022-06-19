@@ -297,7 +297,7 @@ export default function AboutUs() {
               <img src={Calendar} alt="" />
               <div className="text">
                 <h4>Launch Date</h4>
-                <p>June 14</p>
+                <p>June 19</p>
               </div>
             </div>
             <div className="block">
