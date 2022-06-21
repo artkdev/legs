@@ -9,19 +9,21 @@ import { useState } from "react";
 
 export default function Home() {
   const [clicked, setclicked] = useState(false);
-  const [audio] = useState(new Audio(wow));
-
-  console.log(clicked);
 
   function handleClick() {
+    var myMusic = document.getElementById("music");
     setclicked(true);
     setTimeout(() => {
-      audio.play();
+      myMusic.play();
     }, 1500);
   }
 
   return (
     <StyledHome id="Section1">
+      <audio controls id="music">
+        <source src={wow} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
       <div className="container">
         <div className={clicked ? "firstBlock firstAfter" : "firstBlock"}>
           <h1 className={clicked ? " hidden " : ""}>
