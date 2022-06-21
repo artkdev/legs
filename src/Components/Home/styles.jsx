@@ -14,12 +14,6 @@ export const StyledHome = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  audio {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    pointer-events: none;
-  }
   .container {
     width: 100%;
     max-width: 1230px;
