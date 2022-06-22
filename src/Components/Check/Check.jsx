@@ -35,7 +35,11 @@ export default function Check() {
   return (
     <StyledCheck>
       <div className="top">
-        <input type={"number"} onInput={(e) => getAsset(e.target.value)} />
+        <input
+          type={"number"}
+          onInput={(e) => getAsset(e.target.value)}
+          placeholder={"ID"}
+        />
         <p>
           Enter{" "}
           <a href="https://opensea.io/collection/boredapeyachtclub">BAYC*</a>{" "}
