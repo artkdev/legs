@@ -26,7 +26,7 @@ function App() {
         />
         <Route
           exact
-          path="/compare"
+          path="/preview"
           element={<Compare ScrollToTop={ScrollToTop} />}
         />
         <Route

@@ -440,7 +440,7 @@ export default function Home() {
             >
               Mint the other half
             </Link>
-            <NavLink className="mint" to="/compare">
+            <NavLink className="mint" to="/preview">
               Preview
             </NavLink>
             {/* <div
