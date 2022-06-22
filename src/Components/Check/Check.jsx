@@ -74,9 +74,9 @@ export default function Check() {
             <div className="center">
               <h1>You can buy legs for your nft to fully assemble it</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pulvinar dolor quis aliquet erat morbi eget mauris id.
-                Condimentum rhoncus rhoncus in et a, risus turpis placerat.
+                Bayc’s upper torso is already out there, but how the f*$% will they walk on the otherside? 
+                  We found the solution, we hand crafted a pair of legs for every ape! 
+                  Our goal is to have each ape owner have it’s matching pair of legs.
               </p>
               <NavLink
                 className="mint"
