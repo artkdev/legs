@@ -34,12 +34,20 @@ export default function Check() {
     <StyledCheck>
       <input type={"number"} onInput={(e) => getAsset(e.target.value)} />
       <p>Enter BAYC NFT #ID</p>
-      <div>
-        <img src={url} alt="" />
-      </div>
-      <div>
-        <img src={url2} alt="" />
-      </div>
+      {url ? (
+        <div>
+          <img src={url} alt="" />
+        </div>
+      ) : (
+        ""
+      )}
+      {url ? (
+        <div>
+          <img src={url2} alt="" />
+        </div>
+      ) : (
+        ""
+      )}
       {url ? (
         <NavLink
           className="mint"
