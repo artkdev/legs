@@ -59,6 +59,12 @@ export default function Check() {
 const StyledCheck = styled.div`
   min-height: 100vh;
   padding-top: 100px;
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    margin: 5px;
+  }
   .mint {
     text-align: center;
     display: flex;
