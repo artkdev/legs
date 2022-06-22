@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router";
 import { ScrollToTop } from "../Helpers/wallet/Helpers";
 import Mint from "./Mint/Mint";
 import "../styles/theme.css";
+import Compare from "./Compare/Compare";
 
 const AppWrapper = styled.div`
   background-color: gray;
@@ -22,6 +23,11 @@ function App() {
           exact
           path="/mint"
           element={<Mint ScrollToTop={ScrollToTop} />}
+        />
+        <Route
+          exact
+          path="/compare"
+          element={<Compare ScrollToTop={ScrollToTop} />}
         />
         <Route
           path="*"

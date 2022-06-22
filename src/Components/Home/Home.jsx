@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import background from "../../Assets/Home/obj.svg";
 import preview from "../../Assets/Home/preview.jpg";
@@ -112,6 +112,8 @@ const StyledSection = styled.div`
           text-transform: uppercase;
 
           color: #ffffff;
+
+          margin-bottom: 10px;
         }
       }
     }
@@ -438,6 +440,9 @@ export default function Home() {
             >
               Mint the other half
             </Link>
+            <NavLink className="mint" to="/compare">
+              Preview
+            </NavLink>
             {/* <div
               className="mint"
               to="Mint"
