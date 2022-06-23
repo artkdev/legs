@@ -106,7 +106,7 @@ export default function Check() {
                 rel="noopener noreferrer"
                 href="https://opensea.io/collection/boredapelegsclub"
               >
-                Bored Apes Legs Club
+                Bored Ape Legs Club
               </a>
             </div>
           </div>
