@@ -370,13 +370,13 @@ const StyledSection = styled.div`
               line-height: 22px;
               text-align: justify;
               max-width: 320px;
-              height: 149px;
+              height: 50px;
             }
           }
           .mint {
             min-width: 320px;
             height: 50px;
-            font-size: 20px;
+            font-size: 24px;
             line-height: 29px;
           }
         }
