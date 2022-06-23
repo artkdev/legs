@@ -17,5 +17,5 @@ const StyledCompare = styled.div`
   background-image: url(${backgr});
   background-color: #1a1a1a;
   background-position: center;
-  background-size: 100% 100%;
+  background-repeat: no-repeat;
 `;

@@ -234,8 +234,9 @@ const StyledSection = styled.div`
             }
           }
           .mint {
-            margin: 0 auto;
-            max-width: 400px;
+            margin-top: 20px;
+            text-align: center;
+            max-width: 100%;
             height: 60px;
             font-size: 30px;
             line-height: 29px;
@@ -307,8 +308,10 @@ const StyledSection = styled.div`
             }
           }
           .mint {
-            margin: 0;
-            min-width: 330px;
+            text-align: center;
+            max-width: 100%;
+
+            max-width: 100%;
             height: 66px;
             font-size: 24px;
             line-height: 29px;
@@ -373,7 +376,7 @@ const StyledSection = styled.div`
           .mint {
             min-width: 320px;
             height: 50px;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 29px;
           }
         }
