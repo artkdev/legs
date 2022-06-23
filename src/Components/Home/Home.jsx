@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import background from "../../Assets/Home/obj.svg";
 import preview from "../../Assets/Home/preview.jpg";
@@ -112,6 +112,8 @@ const StyledSection = styled.div`
           text-transform: uppercase;
 
           color: #ffffff;
+
+          margin-bottom: 10px;
         }
       }
     }
@@ -232,8 +234,9 @@ const StyledSection = styled.div`
             }
           }
           .mint {
-            margin: 0 auto;
-            max-width: 400px;
+            margin-top: 20px;
+            text-align: center;
+            max-width: 100%;
             height: 60px;
             font-size: 30px;
             line-height: 29px;
@@ -305,8 +308,10 @@ const StyledSection = styled.div`
             }
           }
           .mint {
-            margin: 0;
-            min-width: 330px;
+            text-align: center;
+            max-width: 100%;
+
+            max-width: 100%;
             height: 66px;
             font-size: 24px;
             line-height: 29px;
@@ -365,7 +370,7 @@ const StyledSection = styled.div`
               line-height: 22px;
               text-align: justify;
               max-width: 320px;
-              height: 149px;
+              height: 50px;
             }
           }
           .mint {
@@ -438,6 +443,9 @@ export default function Home() {
             >
               Mint the other half
             </Link>
+            <NavLink className="mint" to="/preview">
+              Preview
+            </NavLink>
             {/* <div
               className="mint"
               to="Mint"

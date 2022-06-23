@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import logo from "../../Assets/footer logo.jpg";
 import MobileHeader from "./MobileHeader/MobileHeader";
 import MobileMenu from "./MobileMenu/MobileMenu";
+import { NavLink } from "react-router-dom";
 
 const StyledHeader = styled.div`
   position: fixed;
@@ -25,6 +26,7 @@ const StyledHeader = styled.div`
 
     gap: 1vw;
     .logo {
+      text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -120,7 +122,7 @@ export default function Header() {
   return (
     <StyledHeader>
       <header>
-        <Link
+        {/* <Link
           className="nav logo"
           activeClass="active"
           to="Section1"
@@ -131,7 +133,11 @@ export default function Header() {
         >
           <img src={logo} alt="" />
           <h1>Bored Ape Legs Club</h1>
-        </Link>
+        </Link> */}
+        <NavLink className="nav logo" to="/">
+          <img src={logo} alt="" />
+          <h1>Bored Ape Legs Club</h1>
+        </NavLink>
         <nav>
           <Link
             className="nav"

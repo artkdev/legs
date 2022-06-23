@@ -25,7 +25,6 @@ export default function MainPage() {
       <Collection />
       <AboutUs />
       <Roadmap />
-
       <Team />
       <Footer />
     </StyledMainPage>
