@@ -134,7 +134,7 @@ export default function Check() {
 
 const StyledCheck = styled.div`
   min-height: 100vh;
-  padding-top: 100px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
