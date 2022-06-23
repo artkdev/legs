@@ -42,7 +42,13 @@ export default function Check() {
         />
         <p>
           Enter{" "}
-          <a href="https://opensea.io/collection/boredapeyachtclub">BAYC*</a>{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://opensea.io/collection/boredapeyachtclub"
+          >
+            BAYC*
+          </a>{" "}
           nft id to fully assemble it
         </p>
       </div>
@@ -66,7 +72,11 @@ export default function Check() {
         {url ? (
           <div className="right">
             <div className="bayc">
-              <a href="https://opensea.io/collection/boredapeyachtclub">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://opensea.io/collection/boredapeyachtclub"
+              >
                 Bored Ape Yacht Club *
               </a>
               <img src={top} alt="" />
@@ -91,7 +101,11 @@ export default function Check() {
 
             <div className="balc">
               <img src={bot} alt="" />
-              <a href="https://opensea.io/collection/boredapelegsclub">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://opensea.io/collection/boredapelegsclub"
+              >
                 Bored Apes Legs Club
               </a>
             </div>
@@ -123,7 +137,11 @@ export default function Check() {
       )}
       <div className="disclaimer">
         *We use{" "}
-        <a href="https://opensea.io/collection/boredapeyachtclub">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://opensea.io/collection/boredapeyachtclub"
+        >
           Bored Ape Yacht Club
         </a>{" "}
         nft collection for preview only.
