@@ -264,7 +264,7 @@ export default function Footer() {
             <div className="bot">
               <a
                 className="link"
-                href="https://twitter.com/balc2022"
+                href="https://twitter.com/BoredApeLegs"
                 target="_blank"
                 rel="noreferrer noopener"
               >

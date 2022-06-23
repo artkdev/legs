@@ -42,7 +42,7 @@ export default function SidePannel() {
     <StyledSidePannel>
       <a
         className="link"
-        href="https://twitter.com/balc2022"
+        href="https://twitter.com/BoredApeLegs"
         target="_blank"
         rel="noreferrer noopener"
       >
