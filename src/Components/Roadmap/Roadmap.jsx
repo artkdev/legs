@@ -265,17 +265,17 @@ export default function Roadmap() {
               </div>
             </div>
           </div>
+
           <div className="block">
             <div className="left">
               <div className="top">2</div>
               <div className="bot"></div>
             </div>
             <div className="right underline">
-              <div className="top"></div>
-              <div className="bot">
-                <div className="text-tittle">Step by step</div>
+              <div className="top">Next step</div>
 
-                <p>Reveal collection</p>
+              <div className="bot">
+                <p>Development of social networks</p>
               </div>
             </div>
           </div>
@@ -285,10 +285,37 @@ export default function Roadmap() {
               <div className="bot"></div>
             </div>
             <div className="right underline">
-              <div className="top">Next step</div>
-
+              <div className="top"></div>
               <div className="bot">
-                <p>Development of social networks</p>
+                <div className="text-tittle">Mini-comics</div>
+
+                <p>Release of a mini-comics based on BALC</p>
+              </div>
+            </div>
+          </div>
+          <div className="block">
+            <div className="left">
+              <div className="top">4</div>
+              <div className="bot"></div>
+            </div>
+            <div className="right underline">
+              <div className="top"></div>
+              <div className="bot">
+                <div className="text-tittle">Development of other half</div>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div className="block">
+            <div className="left">
+              <div className="top">5</div>
+              <div className="bot"></div>
+            </div>
+            <div className="right ">
+              <div className="top"></div>
+              <div className="bot">
+                <div className="text-tittle">Update coming soon</div>
+                <p></p>
               </div>
             </div>
           </div>
