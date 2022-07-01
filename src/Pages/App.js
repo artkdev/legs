@@ -6,6 +6,7 @@ import { ScrollToTop } from "../Helpers/wallet/Helpers";
 import Mint from "./Mint/Mint";
 import "../styles/theme.css";
 import Compare from "./Compare/Compare";
+import Comics from "./Comics/Comics";
 
 const AppWrapper = styled.div`
   background-color: gray;
@@ -28,6 +29,11 @@ function App() {
           exact
           path="/preview"
           element={<Compare ScrollToTop={ScrollToTop} />}
+        />
+        <Route
+          exact
+          path="/comics"
+          element={<Comics ScrollToTop={ScrollToTop} />}
         />
         <Route
           path="*"

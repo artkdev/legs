@@ -304,7 +304,7 @@ export default function AboutUs() {
               <img src={Shopping} alt="" />
               <div className="text">
                 <h4>Price</h4>
-                <p>0 ETH!</p>
+                <p>0 ETH for the first 2000 NFTs!</p>
               </div>
             </div>
             <div className="block">
