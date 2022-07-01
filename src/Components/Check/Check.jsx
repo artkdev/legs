@@ -108,6 +108,8 @@ export default function Check() {
             type={"number"}
             onInput={(e) => getAsset(e.target.value)}
             placeholder={"ID"}
+            min="1"
+            max="9999"
           />
           <p>
             Enter{" "}
@@ -188,6 +190,8 @@ export default function Check() {
             type={"number"}
             onInput={(e) => getAsset2(e.target.value)}
             placeholder={"ID"}
+            min="1"
+            max="9999"
           />
           <p>
             Enter{" "}
@@ -228,6 +232,8 @@ export default function Check() {
             type={"number"}
             onInput={(e) => getAsset2(e.target.value)}
             placeholder={"ID"}
+            min="1"
+            max="9999"
           />
           <p>
             Enter{" "}
