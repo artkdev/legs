@@ -54,6 +54,8 @@ export default function Check() {
 
     if (input === url2) {
       return;
+    } else if (input === "0") {
+      return;
     } else if (!url) {
       fetch(
         `https://api.opensea.io/api/v1/asset/${BAYCadress}/${input}/?include_orders=false`,
@@ -180,6 +182,24 @@ export default function Check() {
           ) : (
             ""
           )}
+        </div>
+        <div className="top3">
+          <input
+            type={"number"}
+            onInput={(e) => getAsset2(e.target.value)}
+            placeholder={"ID"}
+          />
+          <p>
+            Enter{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://opensea.io/collection/boredapelegsclub"
+            >
+              BALC
+            </a>{" "}
+            nft id to fully assemble it
+          </p>
         </div>
 
         {url ? (
@@ -329,6 +349,51 @@ const StyledCheck = styled.div`
       color: #ffffff;
     }
   }
+  .top3 {
+    margin-bottom: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+      width: 147px;
+      height: 44px;
+      background: #ffffff;
+      border: 2px solid #1900ff;
+      border-radius: 10px;
+      text-align: center;
+      margin-right: 88px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 24px;
+      /* identical to box height, or 98% */
+
+      text-align: center;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+
+      color: #151515;
+      animation: flash2 5s infinite ease;
+    }
+    p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 25px;
+      line-height: 22px;
+      /* or 86% */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+  }
+  .top3 {
+    display: none;
+  }
   .bot {
     display: flex;
     align-items: center;
@@ -477,7 +542,9 @@ const StyledCheck = styled.div`
     }
   }
   @media (max-width: 1359px) {
-    .top {
+    .top,
+    .top2,
+    .top3 {
       margin-top: 40px;
       margin-bottom: 30px;
       input {
@@ -488,17 +555,7 @@ const StyledCheck = styled.div`
         line-height: 22px;
       }
     }
-    .top2 {
-      margin-top: 40px;
-      margin-bottom: 30px;
-      input {
-        margin-right: 38px;
-      }
-      p {
-        font-size: 20px;
-        line-height: 22px;
-      }
-    }
+
     .bot {
       margin-bottom: 30px;
       .left {
@@ -557,7 +614,9 @@ const StyledCheck = styled.div`
     }
   }
   @media (max-width: 1023px) {
-    .top {
+    .top,
+    .top2,
+    .top3 {
       margin-top: 30px;
       margin-bottom: 14px;
       input {
@@ -570,19 +629,7 @@ const StyledCheck = styled.div`
         line-height: 22px;
       }
     }
-    .top2 {
-      margin-top: 30px;
-      margin-bottom: 14px;
-      input {
-        font-size: 20px;
-        line-height: 24px;
-        margin-right: 35px;
-      }
-      p {
-        font-size: 16px;
-        line-height: 22px;
-      }
-    }
+
     .bot {
       margin-bottom: 30px;
       .left {
@@ -643,7 +690,8 @@ const StyledCheck = styled.div`
   }
   @media (max-width: 767px) {
     .top,
-    .top2 {
+    .top2,
+    .top3 {
       margin-top: 25px;
       margin-bottom: 30px;
       flex-direction: column;
@@ -722,7 +770,8 @@ const StyledCheck = styled.div`
   }
   @media (max-width: 533px) {
     .top,
-    .top2 {
+    .top2,
+    .top3 {
       margin-top: 20px;
       margin-bottom: 20px;
       input {
@@ -731,6 +780,12 @@ const StyledCheck = styled.div`
         font-size: 12px;
         line-height: 22px;
       }
+    }
+    .top2 {
+      display: none;
+    }
+    .top3 {
+      display: flex;
     }
     .bot {
       margin-bottom: 30px;
