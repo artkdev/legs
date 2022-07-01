@@ -20,121 +20,208 @@ export default function Check() {
       },
     };
 
-    fetch(
-      `https://api.opensea.io/api/v1/asset/${BAYCadress}/${input}/?include_orders=false`,
-      options
-    )
-      .then((response) => response.json())
-      .then((response) => seturl(response.image_url))
-      .catch((err) => console.error(err));
-    seturl2(
-      `https://new.mypinata.cloud/ipfs/QmdK3C4XkeJCCKfF9Gt4WeK2MsBrDMmREint7GyU51RYPJ/${input}.png`
-    );
+    if (!url2) {
+      fetch(
+        `https://api.opensea.io/api/v1/asset/${BAYCadress}/${input}/?include_orders=false`,
+        options
+      )
+        .then((response) => response.json())
+        .then((response) => seturl(response.image_url))
+        .catch((err) => console.error(err));
+      seturl2(
+        `https://new.mypinata.cloud/ipfs/QmdK3C4XkeJCCKfF9Gt4WeK2MsBrDMmREint7GyU51RYPJ/${input}.png`
+      );
+    } else {
+      fetch(
+        `https://api.opensea.io/api/v1/asset/${BAYCadress}/${input}/?include_orders=false`,
+        options
+      )
+        .then((response) => response.json())
+        .then((response) => seturl(response.image_url))
+        .catch((err) => console.error(err));
+    }
+  }
+
+  function getAsset2(input) {
+    const options = {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        // Do not expose your API key in the browser
+        "X-API-KEY": "31e0cc50c1284711abc9837ebf5a5ecd",
+      },
+    };
+
+    if (input === url2) {
+      return;
+    } else if (!url) {
+      fetch(
+        `https://api.opensea.io/api/v1/asset/${BAYCadress}/${input}/?include_orders=false`,
+        options
+      )
+        .then((response) => response.json())
+        .then((response) => seturl(response.image_url))
+        .catch((err) => console.error(err));
+      seturl2(
+        `https://new.mypinata.cloud/ipfs/QmdK3C4XkeJCCKfF9Gt4WeK2MsBrDMmREint7GyU51RYPJ/${input}.png`
+      );
+    } else if (!input) {
+      return;
+    } else {
+      seturl2(
+        `https://new.mypinata.cloud/ipfs/QmdK3C4XkeJCCKfF9Gt4WeK2MsBrDMmREint7GyU51RYPJ/${input}.png`
+      );
+    }
   }
 
   return (
     <StyledCheck>
-      <div className="top">
-        <input
-          type={"number"}
-          onInput={(e) => getAsset(e.target.value)}
-          placeholder={"ID"}
-        />
-        <p>
-          Enter{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://opensea.io/collection/boredapeyachtclub"
+      <StyledHeader>
+        <div className="home">
+          <div className="homeButtn">
+            <NavLink className="link" to="/">
+              home
+            </NavLink>
+          </div>
+        </div>
+        <div className="header">
+          <h1
+            style={{
+              fontFamily: "Montserrat Alternates",
+              fontStyle: "normal",
+              fontWeight: "bold",
+              fontSize: "40px",
+              lineHeight: "49px",
+              /* identical to box height */ color: "#FFFFFF",
+            }}
           >
-            BAYC*
-          </a>{" "}
-          nft id to fully assemble it
-        </p>
-      </div>
-      <div className="bot">
-        <div className="left">
+            Bored Ape Legs Club
+          </h1>
+        </div>
+        <div className="spacer"></div>
+      </StyledHeader>
+      <div>
+        <div className="top">
+          <input
+            type={"number"}
+            onInput={(e) => getAsset(e.target.value)}
+            placeholder={"ID"}
+          />
+          <p>
+            Enter{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://opensea.io/collection/boredapeyachtclub"
+            >
+              BAYC*
+            </a>{" "}
+            nft id
+          </p>
+        </div>
+        <div className="bot">
+          <div className="left">
+            {url ? (
+              <div>
+                <img src={url} alt="" />
+              </div>
+            ) : (
+              ""
+            )}
+            {url ? (
+              <div>
+                <img src={url2} alt="" />
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
           {url ? (
-            <div>
-              <img src={url} alt="" />
-            </div>
-          ) : (
-            ""
-          )}
-          {url ? (
-            <div>
-              <img src={url2} alt="" />
+            <div className="right">
+              <div className="bayc">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://opensea.io/collection/boredapeyachtclub"
+                >
+                  Bored Ape Yacht Club *
+                </a>
+                <img src={top} alt="" />
+              </div>
+              <div className="center">
+                <h1>You can buy legs for your nft to fully assemble it</h1>
+                <p>
+                  Bayc’s upper torso is already out there, but how the f*$% will
+                  they walk on the otherside? We found the solution, we hand
+                  crafted a pair of legs for every ape! Our goal is to have each
+                  ape owner have it’s matching pair of legs.
+                </p>
+                <NavLink
+                  className="mint"
+                  to="/Mint"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h2>Mint the other half</h2>
+                </NavLink>
+              </div>
+
+              <div className="balc">
+                <img src={bot} alt="" />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://opensea.io/collection/boredapelegsclub"
+                >
+                  Bored Ape Legs Club
+                </a>
+              </div>
             </div>
           ) : (
             ""
           )}
         </div>
-        {url ? (
-          <div className="right">
-            <div className="bayc">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://opensea.io/collection/boredapeyachtclub"
-              >
-                Bored Ape Yacht Club *
-              </a>
-              <img src={top} alt="" />
-            </div>
-            <div className="center">
-              <h1>You can buy legs for your nft to fully assemble it</h1>
-              <p>
-                Bayc’s upper torso is already out there, but how the f*$% will
-                they walk on the otherside? We found the solution, we hand
-                crafted a pair of legs for every ape! Our goal is to have each
-                ape owner have it’s matching pair of legs.
-              </p>
-              <NavLink
-                className="mint"
-                to="/Mint"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <h2>Mint the other half</h2>
-              </NavLink>
-            </div>
 
-            <div className="balc">
-              <img src={bot} alt="" />
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://opensea.io/collection/boredapelegsclub"
-              >
-                Bored Ape Legs Club
-              </a>
-            </div>
+        {url ? (
+          <div className="center2">
+            <h1>You can buy legs for your nft to fully assemble it</h1>
+            <p>
+              Bayc’s upper torso is already out there, but how the f*$% will
+              they walk on the otherside? We found the solution, we hand crafted
+              a pair of legs for every ape! Our goal is to have each ape owner
+              have it’s matching pair of legs.
+            </p>
+            <NavLink
+              className="mint"
+              to="/Mint"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2>Mint the other half</h2>
+            </NavLink>
           </div>
         ) : (
           ""
         )}
-      </div>
-      {url ? (
-        <div className="center2">
-          <h1>You can buy legs for your nft to fully assemble it</h1>
+        <div className="top2">
+          <input
+            type={"number"}
+            onInput={(e) => getAsset2(e.target.value)}
+            placeholder={"ID"}
+          />
           <p>
-            Bayc’s upper torso is already out there, but how the f*$% will they
-            walk on the otherside? We found the solution, we hand crafted a pair
-            of legs for every ape! Our goal is to have each ape owner have it’s
-            matching pair of legs.
+            Enter{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://opensea.io/collection/boredapelegsclub"
+            >
+              BALC
+            </a>{" "}
+            nft id to fully assemble it
           </p>
-          <NavLink
-            className="mint"
-            to="/Mint"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>Mint the other half</h2>
-          </NavLink>
         </div>
-      ) : (
-        ""
-      )}
+      </div>
       <div className="disclaimer">
         *We use{" "}
         <a
@@ -185,6 +272,48 @@ const StyledCheck = styled.div`
 
       color: #151515;
       animation: flash 5s infinite ease;
+    }
+    p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 25px;
+      line-height: 22px;
+      /* or 86% */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+  }
+  .top2 {
+    margin-bottom: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+      width: 147px;
+      height: 44px;
+      background: #ffffff;
+      border: 2px solid #1900ff;
+      border-radius: 10px;
+      text-align: center;
+      margin-right: 88px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 24px;
+      /* identical to box height, or 98% */
+
+      text-align: center;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+
+      color: #151515;
+      animation: flash2 5s infinite ease;
     }
     p {
       font-family: "Montserrat";
@@ -342,8 +471,24 @@ const StyledCheck = styled.div`
       box-shadow: 0 0 10px #ff6b00, inset 0 0 5px #ff6b00;
     }
   }
+  @keyframes flash2 {
+    50% {
+      box-shadow: 0 0 10px #1900ff, inset 0 0 5px #1900ff;
+    }
+  }
   @media (max-width: 1359px) {
     .top {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      input {
+        margin-right: 38px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
+    .top2 {
       margin-top: 40px;
       margin-bottom: 30px;
       input {
@@ -425,6 +570,19 @@ const StyledCheck = styled.div`
         line-height: 22px;
       }
     }
+    .top2 {
+      margin-top: 30px;
+      margin-bottom: 14px;
+      input {
+        font-size: 20px;
+        line-height: 24px;
+        margin-right: 35px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
     .bot {
       margin-bottom: 30px;
       .left {
@@ -484,7 +642,8 @@ const StyledCheck = styled.div`
     }
   }
   @media (max-width: 767px) {
-    .top {
+    .top,
+    .top2 {
       margin-top: 25px;
       margin-bottom: 30px;
       flex-direction: column;
@@ -562,7 +721,8 @@ const StyledCheck = styled.div`
     }
   }
   @media (max-width: 533px) {
-    .top {
+    .top,
+    .top2 {
       margin-top: 20px;
       margin-bottom: 20px;
       input {
@@ -692,5 +852,65 @@ const StyledCheck = styled.div`
       font-size: 12px;
       line-height: 22px;
     }
+  }
+`;
+
+const StyledHeader = styled.div`
+  margin-top: 30px;
+  padding: 0 24px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  .home {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    .homeButtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 141px;
+      height: 50px;
+
+      background: #f0d52d;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15),
+        inset 0px 2px 6px 1px rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
+      .link {
+        text-decoration: none;
+        font-family: Montserrat Alternates;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 34px;
+        text-transform: capitalize;
+
+        color: #ffffff;
+
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+  .header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    flex: 2;
+  }
+  .spacer {
+    width: 100%;
+    flex: 1;
+  }
+  @media (min-width: 767px) {
+    flex-direction: row;
   }
 `;
