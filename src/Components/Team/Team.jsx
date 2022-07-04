@@ -174,7 +174,7 @@ export default function Team() {
             <img src={DARKARKI} alt="" />
             <div className="text">
               <div className="link">
-                <h2>KRISCAPELLE</h2>
+                <h2>ARTARTAS</h2>
               </div>
             </div>
           </div>
