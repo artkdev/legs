@@ -261,7 +261,7 @@ export default function Roadmap() {
               <div className="bot">
                 <div className="text-tittle">The first step</div>
                 2500 of 10000 Bored Apes Legs Club NFTs will be available for
-                mint at 0 ETH!
+                mint at 0 ETH and 0.01 ETH after!
               </div>
             </div>
           </div>

@@ -206,12 +206,12 @@ const StyledSection = styled.div`
             .text {
               width: 80px;
               h4 {
-                font-size: 12px;
-                line-height: 15px;
+                font-size: 10px;
+                line-height: 10px;
               }
               p {
-                font-size: 11px;
-                line-height: 15px;
+                font-size: 10px;
+                line-height: 10px;
               }
             }
           }
@@ -249,12 +249,12 @@ const StyledSection = styled.div`
             .text {
               width: 80px;
               h4 {
-                font-size: 12px;
-                line-height: 15px;
+                font-size: 9px;
+                line-height: 9px;
               }
               p {
-                font-size: 11px;
-                line-height: 15px;
+                font-size: 9px;
+                line-height: 9px;
               }
             }
           }
@@ -304,7 +304,7 @@ export default function AboutUs() {
               <img src={Shopping} alt="" />
               <div className="text">
                 <h4>Price</h4>
-                <p>0 ETH for the first 2500 NFTs!</p>
+                <p>0 ETH for the first 2500 NFTs and 0.01 ETH after!</p>
               </div>
             </div>
             <div className="block">
