@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import background from "../../Assets/Roadmap/obj.svg";
+import check from "../../Assets/Roadmap/bi_check-circle-fill.png";
 
 const StyledSection = styled.div`
   padding: 100px 5vw;
@@ -43,6 +44,14 @@ const StyledSection = styled.div`
         display: flex;
         flex-direction: row;
         gap: 1vw;
+        position: relative;
+        .check {
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
         .left {
           width: 100px;
           display: flex;
@@ -252,6 +261,7 @@ export default function Roadmap() {
         <div className="title">Roadmap</div>
         <div className="content">
           <div className="block">
+            <img className="check" src={check} alt="" />
             <div className="left">
               <div className="top">1</div>
               <div className="bot"></div>
@@ -267,6 +277,7 @@ export default function Roadmap() {
           </div>
 
           <div className="block">
+            <img className="check" src={check} alt="" />
             <div className="left">
               <div className="top">2</div>
               <div className="bot"></div>
@@ -280,6 +291,7 @@ export default function Roadmap() {
             </div>
           </div>
           <div className="block">
+            <img className="check" src={check} alt="" />
             <div className="left">
               <div className="top">3</div>
               <div className="bot"></div>
