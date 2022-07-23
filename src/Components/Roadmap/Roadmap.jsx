@@ -49,8 +49,8 @@ const StyledSection = styled.div`
           width: 25px;
           height: 25px;
           position: absolute;
-          right: 0;
-          top: 0;
+          right: 0px;
+          top: 5px;
         }
         .left {
           width: 100px;
