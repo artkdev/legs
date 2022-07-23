@@ -4,13 +4,20 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import top from "../../Assets/Check/top.svg";
 import bot from "../../Assets/Check/bot.svg";
+import left from "../../Assets/Check/left.png";
+import right from "../../Assets/Check/right.png";
 
 export default function Check() {
   const BAYCadress = "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d";
+  const [first, setfirst] = useState("");
+  const [second, setsecond] = useState("");
   const [url, seturl] = useState();
   const [url2, seturl2] = useState();
 
+  console.log(first, second);
+
   function getAsset(input) {
+    setfirst(parseInt(input));
     const options = {
       method: "GET",
       headers: {
@@ -31,6 +38,7 @@ export default function Check() {
       seturl2(
         `https://new.mypinata.cloud/ipfs/QmdK3C4XkeJCCKfF9Gt4WeK2MsBrDMmREint7GyU51RYPJ/${input}.png`
       );
+      setsecond(parseInt(input));
     } else {
       fetch(
         `https://api.opensea.io/api/v1/asset/${BAYCadress}/${input}/?include_orders=false`,
@@ -43,6 +51,7 @@ export default function Check() {
   }
 
   function getAsset2(input) {
+    setsecond(parseInt(input));
     const options = {
       method: "GET",
       headers: {
@@ -67,6 +76,7 @@ export default function Check() {
       seturl2(
         `https://new.mypinata.cloud/ipfs/QmdK3C4XkeJCCKfF9Gt4WeK2MsBrDMmREint7GyU51RYPJ/${input}.png`
       );
+      setfirst(parseInt(input));
     } else if (!input) {
       return;
     } else {
@@ -74,6 +84,27 @@ export default function Check() {
         `https://new.mypinata.cloud/ipfs/QmdK3C4XkeJCCKfF9Gt4WeK2MsBrDMmREint7GyU51RYPJ/${input}.png`
       );
     }
+  }
+
+  function handleChangeAsset(input) {
+    if (input < 1) {
+      setfirst("");
+      return;
+    } else if (input > 9999) {
+      setfirst("");
+      return;
+    }
+    getAsset(input);
+  }
+  function handleChangeAsset2(input) {
+    if (input < 1) {
+      setfirst("");
+      return;
+    } else if (input > 9999) {
+      setfirst("");
+      return;
+    }
+    getAsset2(input);
   }
 
   return (
@@ -104,13 +135,22 @@ export default function Check() {
       </StyledHeader>
       <div>
         <div className="top">
-          <input
-            type={"number"}
-            onInput={(e) => getAsset(e.target.value)}
-            placeholder={"ID"}
-            min="1"
-            max="9999"
-          />
+          <div className="topInputMobileBlock">
+            <div className="decr" onClick={() => handleChangeAsset(first - 1)}>
+              <img src={left} alt="" />
+            </div>
+            <input
+              type={"number"}
+              onChange={(e) => getAsset(e.target.value)}
+              placeholder={"ID"}
+              value={first}
+              min="1"
+              max="9999"
+            />
+            <div className="inc" onClick={() => handleChangeAsset(first + 1)}>
+              <img src={right} alt="" />
+            </div>
+          </div>
           <p>
             Enter{" "}
             <a
@@ -185,14 +225,27 @@ export default function Check() {
             ""
           )}
         </div>
-        <div className="top3">
-          <input
-            type={"number"}
-            onInput={(e) => getAsset2(e.target.value)}
-            placeholder={"ID"}
-            min="1"
-            max="9999"
-          />
+        <div className="botInputMobile">
+          <div className="botInputMobileBlock">
+            <div
+              className="decr"
+              onClick={() => handleChangeAsset2(second - 1)}
+            >
+              <img src={left} alt="" />
+            </div>
+            <input
+              type={"number"}
+              onChange={(e) => getAsset2(e.target.value)}
+              placeholder={"ID"}
+              value={second}
+              min="1"
+              max="9999"
+            />
+            <div className="inc" onClick={() => handleChangeAsset2(second + 1)}>
+              <img src={right} alt="" />
+            </div>
+          </div>
+
           <p>
             Enter{" "}
             <a
@@ -227,14 +280,26 @@ export default function Check() {
         ) : (
           ""
         )}
-        <div className="top2">
-          <input
-            type={"number"}
-            onInput={(e) => getAsset2(e.target.value)}
-            placeholder={"ID"}
-            min="1"
-            max="9999"
-          />
+        <div className="botInput">
+          <div className="botInputMobileBlock">
+            <div
+              className="decr"
+              onClick={() => handleChangeAsset2(second - 1)}
+            >
+              <img src={left} alt="" />
+            </div>
+            <input
+              type={"number"}
+              onChange={(e) => getAsset2(e.target.value)}
+              placeholder={"ID"}
+              value={second}
+              min="1"
+              max="9999"
+            />
+            <div className="inc" onClick={() => handleChangeAsset2(second + 1)}>
+              <img src={right} alt="" />
+            </div>
+          </div>
           <p>
             Enter{" "}
             <a
@@ -276,28 +341,42 @@ const StyledCheck = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    input {
-      width: 147px;
-      height: 44px;
-      background: #ffffff;
-      border: 2px solid #ff6b00;
-      border-radius: 10px;
-      text-align: center;
-      margin-right: 88px;
+    .topInputMobileBlock {
+      margin-right: 35px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
 
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 25px;
-      line-height: 24px;
-      /* identical to box height, or 98% */
+      input {
+        min-width: 147px;
+        height: 44px;
+        background: #ffffff;
+        border: 2px solid #ff6b00;
+        border-radius: 10px;
+        text-align: center;
 
-      text-align: center;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 24px;
+        /* identical to box height, or 98% */
 
-      color: #151515;
-      animation: flash 5s infinite ease;
+        text-align: center;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+
+        color: #151515;
+        animation: flash 5s infinite ease;
+      }
+      .inc,
+      .decr {
+        width: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
     }
     p {
       font-family: "Montserrat";
@@ -313,33 +392,43 @@ const StyledCheck = styled.div`
       color: #ffffff;
     }
   }
-  .top2 {
+  .botInput {
     margin-bottom: 41px;
     display: flex;
     align-items: center;
     justify-content: center;
-    input {
-      width: 147px;
-      height: 44px;
-      background: #ffffff;
-      border: 2px solid #1900ff;
-      border-radius: 10px;
-      text-align: center;
-      margin-right: 88px;
+    .botInputMobileBlock {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+      margin-right: 35px;
+      .inc,
+      .decr {
+        display: none;
+      }
+      input {
+        min-width: 147px;
+        height: 44px;
+        background: #ffffff;
+        border: 2px solid #1900ff;
+        border-radius: 10px;
+        text-align: center;
 
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 25px;
-      line-height: 24px;
-      /* identical to box height, or 98% */
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 24px;
+        /* identical to box height, or 98% */
 
-      text-align: center;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
 
-      color: #151515;
-      animation: flash2 5s infinite ease;
+        color: #151515;
+        animation: flash2 5s infinite ease;
+      }
     }
     p {
       font-family: "Montserrat";
@@ -355,34 +444,47 @@ const StyledCheck = styled.div`
       color: #ffffff;
     }
   }
-  .top3 {
+  .botInputMobile {
     margin-bottom: 41px;
     display: flex;
     align-items: center;
     justify-content: center;
-    input {
-      width: 147px;
-      height: 44px;
-      background: #ffffff;
-      border: 2px solid #1900ff;
-      border-radius: 10px;
-      text-align: center;
-      margin-right: 88px;
+    .botInputMobileBlock {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+      .inc,
+      .decr {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        min-width: 147px;
+        height: 44px;
+        background: #ffffff;
+        border: 2px solid #1900ff;
+        border-radius: 10px;
+        text-align: center;
 
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 25px;
-      line-height: 24px;
-      /* identical to box height, or 98% */
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 24px;
+        /* identical to box height, or 98% */
 
-      text-align: center;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
 
-      color: #151515;
-      animation: flash2 5s infinite ease;
+        color: #151515;
+        animation: flash2 5s infinite ease;
+      }
     }
+
     p {
       font-family: "Montserrat";
       font-style: normal;
@@ -397,7 +499,7 @@ const StyledCheck = styled.div`
       color: #ffffff;
     }
   }
-  .top3 {
+  .botInputMobile {
     display: none;
   }
   .bot {
@@ -549,12 +651,11 @@ const StyledCheck = styled.div`
   }
   @media (max-width: 1359px) {
     .top,
-    .top2,
-    .top3 {
+    .botInput,
+    .botInputMobile {
       margin-top: 40px;
       margin-bottom: 30px;
       input {
-        margin-right: 38px;
       }
       p {
         font-size: 20px;
@@ -621,18 +722,39 @@ const StyledCheck = styled.div`
   }
   @media (max-width: 1023px) {
     .top,
-    .top2,
-    .top3 {
+    .botInput,
+    .botInputMobile {
       margin-top: 30px;
       margin-bottom: 14px;
       input {
         font-size: 20px;
         line-height: 24px;
-        margin-right: 35px;
       }
       p {
         font-size: 16px;
         line-height: 22px;
+      }
+    }
+    .top {
+      .topInputMobileBlock {
+        .inc,
+        .decr {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .botInput {
+      .botInputMobileBlock {
+        .inc,
+        .decr {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
 
@@ -696,8 +818,8 @@ const StyledCheck = styled.div`
   }
   @media (max-width: 767px) {
     .top,
-    .top2,
-    .top3 {
+    .botInput,
+    .botInputMobile {
       margin-top: 25px;
       margin-bottom: 30px;
       flex-direction: column;
@@ -707,13 +829,28 @@ const StyledCheck = styled.div`
         height: 36px;
         font-size: 18px;
         line-height: 24px;
-        order: 2;
+
         margin-right: 0;
       }
       p {
         order: 1;
         font-size: 14px;
         line-height: 22px;
+      }
+    }
+    .top {
+      .topInputMobileBlock {
+        margin: 0;
+      }
+    }
+    .botInput {
+      .botInputMobileBlock {
+        margin-right: 0;
+      }
+    }
+    .botInputMobile {
+      input {
+        order: unset;
       }
     }
     .bot {
@@ -776,8 +913,8 @@ const StyledCheck = styled.div`
   }
   @media (max-width: 533px) {
     .top,
-    .top2,
-    .top3 {
+    .botInput,
+    .botInputMobile {
       margin-top: 20px;
       margin-bottom: 20px;
       input {
@@ -787,10 +924,11 @@ const StyledCheck = styled.div`
         line-height: 22px;
       }
     }
-    .top2 {
+
+    .botInput {
       display: none;
     }
-    .top3 {
+    .botInputMobile {
       display: flex;
     }
     .bot {
