@@ -5,8 +5,6 @@ export const StyledFAQ = styled.section`
   padding: 100px 5vw;
   padding-bottom: 100px;
   width: 100%;
-  min-height: 1100px;
-
   display: flex;
   align-items: flex-start;
   justify-content: center;

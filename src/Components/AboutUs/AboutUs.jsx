@@ -7,7 +7,6 @@ import Warning from "../../Assets/About Us/Warning.svg";
 import background from "../../Assets/About Us/obj.svg";
 const StyledSection = styled.div`
   padding: 100px 5vw;
-  min-height: 1100px;
   width: 100%;
   background: no-repeat url(${background});
   background-color: #1a1a1a;
@@ -102,7 +101,6 @@ const StyledSection = styled.div`
     }
   }
   @media (max-width: 960px) {
-    min-height: 900px;
     .wrapper {
       max-width: 700px;
 
@@ -135,7 +133,7 @@ const StyledSection = styled.div`
   }
   @media (max-width: 768px) {
     padding: 100px 5vw;
-    min-height: 750px;
+
     .wrapper {
       max-width: 600px;
 
@@ -178,7 +176,7 @@ const StyledSection = styled.div`
   }
   @media (max-width: 534px) {
     padding: 100px 5vw;
-    min-height: 750px;
+
     .wrapper {
       max-width: 360px;
       gap: 20px;
@@ -221,7 +219,7 @@ const StyledSection = styled.div`
   }
   @media (max-width: 360px) {
     padding: 100px 5vw;
-    min-height: 750px;
+
     .wrapper {
       max-width: 360px;
       gap: 20px;

@@ -14,8 +14,6 @@ import site from "../../Assets/team/Group 5.png";
 const StyledSection = styled.div`
   padding: 100px 5vw;
   width: 100%;
-  min-height: 1000px;
-
   display: flex;
   align-items: flex-start;
   justify-content: center;

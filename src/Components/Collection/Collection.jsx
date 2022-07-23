@@ -21,7 +21,6 @@ import { NavLink } from "react-router-dom";
 
 const StyledSection = styled.div`
   padding-bottom: 100px;
-  min-height: 650px;
   width: 100%;
   background: no-repeat url(${background});
   background-color: #1a1a1a;
@@ -119,7 +118,6 @@ const StyledSection = styled.div`
   }
 
   @media (max-width: 768px) {
-    min-height: 500px;
     h1 {
       margin-top: 100px;
       font-size: 55px;
@@ -147,7 +145,6 @@ const StyledSection = styled.div`
     }
   }
   @media (max-width: 534px) {
-    min-height: 400px;
     h1 {
       margin-top: 100px;
       font-size: 30px;
@@ -176,7 +173,6 @@ const StyledSection = styled.div`
     }
   }
   @media (max-width: 360px) {
-    min-height: 300px;
     h1 {
       margin-top: 100px;
       font-size: 30px;
