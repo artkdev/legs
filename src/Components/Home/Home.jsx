@@ -6,7 +6,6 @@ import preview from "../../Assets/Home/preview.jpg";
 
 const StyledSection = styled.div`
   padding: 100px 5vw;
-  min-height: 900px;
   width: 100%;
   background: no-repeat url(${background});
   background-color: #1a1a1a;
@@ -16,6 +15,7 @@ const StyledSection = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
   .container {
     width: 100%;
     max-width: 1230px;
@@ -376,8 +376,8 @@ const StyledSection = styled.div`
           .mint {
             min-width: 320px;
             height: 50px;
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 20px;
+            line-height: 24px;
           }
         }
       }
@@ -443,9 +443,6 @@ export default function Home() {
             >
               Mint the other half
             </Link>
-            <NavLink className="mint" to="/preview">
-              Preview
-            </NavLink>
             {/* <div
               className="mint"
               to="Mint"

@@ -17,10 +17,10 @@ import img13 from "../../Assets/Carousel/13.png";
 import img14 from "../../Assets/Carousel/14.png";
 import img15 from "../../Assets/Carousel/15.png";
 import img16 from "../../Assets/Carousel/16.png";
+import { NavLink } from "react-router-dom";
 
 const StyledSection = styled.div`
   padding-bottom: 100px;
-  min-height: 650px;
   width: 100%;
   background: no-repeat url(${background});
   background-color: #1a1a1a;
@@ -45,6 +45,7 @@ const StyledSection = styled.div`
   }
   .carousel {
     margin-top: 50px;
+    margin-bottom: 30px;
     position: relative;
     height: 236px;
     width: 100%;
@@ -66,6 +67,50 @@ const StyledSection = styled.div`
       }
     }
   }
+  h2 {
+    margin-bottom: 30px;
+    max-width: 691px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+  .mint {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    min-width: 377px;
+    height: 66px;
+    background: #f0d52d;
+    border: 2px solid white;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    margin-bottom: 10px;
+  }
   @keyframes move_left {
     0% {
       transform: translate(0);
@@ -74,12 +119,15 @@ const StyledSection = styled.div`
       transform: translate(-100%);
     }
   }
-
   @media (max-width: 768px) {
-    min-height: 500px;
     h1 {
       margin-top: 100px;
       font-size: 55px;
+    }
+    h2 {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 25px;
     }
     .carousel {
       margin-top: 40px;
@@ -94,13 +142,26 @@ const StyledSection = styled.div`
         }
       }
     }
+    .mint {
+      margin-top: 20px;
+      text-align: center;
+      max-width: 100%;
+      height: 60px;
+      font-size: 30px;
+      line-height: 29px;
+    }
   }
   @media (max-width: 534px) {
-    min-height: 400px;
     h1 {
       margin-top: 100px;
       font-size: 30px;
     }
+    h2 {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+
     .carousel {
       margin-top: 20px;
       height: 137px;
@@ -114,9 +175,17 @@ const StyledSection = styled.div`
         }
       }
     }
+    .mint {
+      text-align: center;
+      max-width: 100%;
+
+      max-width: 100%;
+      height: 66px;
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
   @media (max-width: 360px) {
-    min-height: 300px;
     h1 {
       margin-top: 100px;
       font-size: 30px;
@@ -133,6 +202,18 @@ const StyledSection = styled.div`
           border-radius: 30px;
         }
       }
+    }
+    h2 {
+      max-width: 320px;
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+    .mint {
+      min-width: 320px;
+      height: 50px;
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 `;
@@ -176,6 +257,10 @@ export default function Collection() {
           <img src={img16} alt="" />
         </div>
       </div>
+      <h2>Find a match for your NFT or try different combinations!</h2>
+      <NavLink className="mint" to="/preview">
+        Preview
+      </NavLink>
     </StyledSection>
   );
 }
