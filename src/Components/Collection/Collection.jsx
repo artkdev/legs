@@ -68,16 +68,19 @@ const StyledSection = styled.div`
     }
   }
   h2 {
-    margin-bottom: 10px;
-    max-width: 377px;
+    margin-bottom: 30px;
+    max-width: 691px;
 
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+
     text-align: center;
-    letter-spacing: -0.05em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 
     color: #ffffff;
   }
@@ -122,6 +125,10 @@ const StyledSection = styled.div`
       margin-top: 100px;
       font-size: 55px;
     }
+    h2 {
+      font-size: 25px;
+      line-height: 30px;
+    }
     .carousel {
       margin-top: 40px;
       height: 167px;
@@ -149,6 +156,11 @@ const StyledSection = styled.div`
       margin-top: 100px;
       font-size: 30px;
     }
+    h2 {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
     .carousel {
       margin-top: 20px;
       height: 137px;
