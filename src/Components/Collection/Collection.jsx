@@ -119,7 +119,6 @@ const StyledSection = styled.div`
       transform: translate(-100%);
     }
   }
-
   @media (max-width: 768px) {
     h1 {
       margin-top: 100px;

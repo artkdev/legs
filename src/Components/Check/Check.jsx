@@ -87,20 +87,28 @@ export default function Check() {
 
   function handleChangeAsset(input) {
     if (input < 1) {
-      setfirst("");
+      setfirst(1);
       return;
     } else if (input > 9999) {
-      setfirst("");
+      setfirst(9999);
+      return;
+    }
+    if (!first) {
+      getAsset(1);
       return;
     }
     getAsset(input);
   }
   function handleChangeAsset2(input) {
     if (input < 1) {
-      setfirst("");
+      setsecond(1);
       return;
     } else if (input > 9999) {
-      setfirst("");
+      setsecond(9999);
+      return;
+    }
+    if (!second) {
+      getAsset2(1);
       return;
     }
     getAsset2(input);
