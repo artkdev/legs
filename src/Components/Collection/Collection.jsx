@@ -128,6 +128,7 @@ const StyledSection = styled.div`
     h2 {
       font-size: 25px;
       line-height: 30px;
+      margin-bottom: 25px;
     }
     .carousel {
       margin-top: 40px;
@@ -159,6 +160,7 @@ const StyledSection = styled.div`
     h2 {
       font-size: 20px;
       line-height: 25px;
+      margin-bottom: 20px;
     }
 
     .carousel {
@@ -206,6 +208,7 @@ const StyledSection = styled.div`
       max-width: 320px;
       font-size: 15px;
       line-height: 20px;
+      margin-bottom: 15px;
     }
     .mint {
       min-width: 320px;
