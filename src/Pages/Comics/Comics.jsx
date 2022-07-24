@@ -25,14 +25,14 @@ const comics1 = {
   pages: [img1, img2, img3, img4, img5],
 };
 
-const comics2 = {
-  name: "monkey adventure",
-  description: "This story is about monkeys and adventures",
-  prev: prev2,
-  pages: [img5, img4, img3, img2, img1],
-};
+// const comics2 = {
+//   name: "monkey adventure",
+//   description: "This story is about monkeys and adventures",
+//   prev: prev2,
+//   pages: [img5, img4, img3, img2, img1],
+// };
 
-const comics = [comics1, comics2];
+const comics = [comics1];
 
 export default function Comics() {
   const [current, setCurrent] = useState(0);
@@ -268,10 +268,13 @@ const View = ({ visibility, setVisibility, cur }) => {
   return (
     <StyledView visibility={visibility} full={full}>
       <div className="wrapper">
-        <div className="back" onClick={() => handleBack()}>
-          <img src={back} alt="" />
-        </div>
+        <div className="spacer1" />
+
         <div className="page">
+          <div className="back" onClick={() => handleBack()}>
+            <img src={back} alt="" />
+          </div>
+
           <div onClick={() => setfull(!full)}>
             <img className="img" src={comics[cur].pages[page]} alt="" />
           </div>
@@ -315,25 +318,25 @@ const StyledView = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    .back {
-      position: sticky;
-      top: 10px;
-      width: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      img {
-        min-width: 50px;
-        min-height: 50px;
-      }
-    }
+
     .page {
       min-height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      .back {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 15px;
+        img {
+          min-width: 50px;
+          min-height: 50px;
+        }
+      }
       .img {
         width: ${({ full }) => (full ? `1024px` : "100%")};
         max-height: ${({ full }) => (full ? `` : "80vh")};

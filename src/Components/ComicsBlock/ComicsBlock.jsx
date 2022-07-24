@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 export default function ComixBlock() {
   return (
-    <StyledComixBlock>
+    <StyledComixBlock id="comics_block">
       <div className="wraper">
         <h1 className="title">comics</h1>
         <p className="descr">Check our comics to knew more about BALC NFTs!</p>

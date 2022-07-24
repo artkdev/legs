@@ -91,6 +91,7 @@ const StyledSection = styled.div`
               line-height: 24px;
 
               color: #202020;
+              letter-spacing: -0.06em;
             }
             a {
               text-decoration: none;

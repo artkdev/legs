@@ -164,6 +164,17 @@ export default function Header() {
           <Link
             className="nav"
             activeClass="active"
+            to="comics_block"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Comics
+          </Link>
+          <Link
+            className="nav"
+            activeClass="active"
             to="Section3"
             spy={true}
             smooth={true}

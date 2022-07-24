@@ -38,7 +38,7 @@ const StyledMobileMenu = styled.div`
       color: #ffffff;
     }
     .active {
-      color: #60c77c;
+      color: #ffeb39;
       pointer-events: none;
     }
   }
@@ -101,6 +101,18 @@ export default function MobileMenu({ isOpened, delateSetOpen }) {
           duration={500}
         >
           Collection
+        </Link>
+        <Link
+          onClick={() => delateSetOpen()}
+          className="link"
+          activeClass="active"
+          to="comics_block"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          Comics
         </Link>
         <Link
           onClick={() => delateSetOpen()}

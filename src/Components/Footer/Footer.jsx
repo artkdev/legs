@@ -154,7 +154,6 @@ const StyledFooter = styled.div`
   @media (max-width: 534px) {
     .wraper {
       .logoBlock {
-        border-top: 4px solid #1b5e2e;
         border-left: 0px;
         padding-top: 60px;
         width: 100%;
@@ -183,7 +182,6 @@ const StyledFooter = styled.div`
   @media (max-width: 360px) {
     .wraper {
       .logoBlock {
-        border-top: 4px solid #1b5e2e;
         border-left: 0px;
         padding-top: 60px;
         width: 100%;
