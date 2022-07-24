@@ -10,7 +10,7 @@ const StyledHeader = styled.div`
   position: fixed;
   width: 100%;
   height: 100px;
-  background: black;
+  background: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,6 +160,17 @@ export default function Header() {
             duration={500}
           >
             Collection
+          </Link>
+          <Link
+            className="nav"
+            activeClass="active"
+            to="comics_block"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Comics
           </Link>
           <Link
             className="nav"

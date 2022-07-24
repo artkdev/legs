@@ -14,7 +14,9 @@ import back from "../../Assets/Comics/akar-icons_arrow-up.png";
 import prev from "../../Assets/Comics/prev.png";
 import next from "../../Assets/Comics/next.png";
 
-import { useState } from "react";
+import background from "../../Assets/Home/Home.svg";
+
+import { useEffect, useState } from "react";
 
 const comics1 = {
   name: "monkey adventure",
@@ -23,18 +25,22 @@ const comics1 = {
   pages: [img1, img2, img3, img4, img5],
 };
 
-const comics2 = {
-  name: "monkey adventure",
-  description: "This story is about monkeys and adventures",
-  prev: prev2,
-  pages: [img5, img4, img3, img2, img1],
-};
+// const comics2 = {
+//   name: "monkey adventure",
+//   description: "This story is about monkeys and adventures",
+//   prev: prev2,
+//   pages: [img5, img4, img3, img2, img1],
+// };
 
-const comics = [comics1, comics2];
+const comics = [comics1];
 
 export default function Comics() {
   const [current, setCurrent] = useState(0);
   const [visibility, setVisibility] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <StyledCompare>
@@ -77,7 +83,9 @@ const StyledCompare = styled.div`
   padding-top: 30px;
   min-height: 100vh;
   height: fit-content;
-  background-color: #1a1a1a;
+  background: no-repeat url(${background});
+  background-position: center;
+  background-size: cover;
   position: relative;
   padding: 40px 100px;
   .content {
@@ -123,7 +131,7 @@ const StyledHeader = styled.div`
         line-height: 34px;
         text-transform: capitalize;
 
-        color: #ffffff;
+        color: #202020;
 
         text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
       }
@@ -260,10 +268,13 @@ const View = ({ visibility, setVisibility, cur }) => {
   return (
     <StyledView visibility={visibility} full={full}>
       <div className="wrapper">
-        <div className="back" onClick={() => handleBack()}>
-          <img src={back} alt="" />
-        </div>
+        <div className="spacer1" />
+
         <div className="page">
+          <div className="back" onClick={() => handleBack()}>
+            <img src={back} alt="" />
+          </div>
+
           <div onClick={() => setfull(!full)}>
             <img className="img" src={comics[cur].pages[page]} alt="" />
           </div>
@@ -307,25 +318,25 @@ const StyledView = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    .back {
-      position: sticky;
-      top: 10px;
-      width: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      img {
-        min-width: 50px;
-        min-height: 50px;
-      }
-    }
+
     .page {
       min-height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      .back {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 15px;
+        img {
+          min-width: 50px;
+          min-height: 50px;
+        }
+      }
       .img {
         width: ${({ full }) => (full ? `1024px` : "100%")};
         max-height: ${({ full }) => (full ? `` : "80vh")};

@@ -4,12 +4,12 @@ import Document from "../../Assets/About Us/Document.svg";
 import Calendar from "../../Assets/About Us/Calendar.svg";
 import Shopping from "../../Assets/About Us/Shopping.svg";
 import Warning from "../../Assets/About Us/Warning.svg";
-import background from "../../Assets/About Us/obj.svg";
+import background from "../../Assets/About Us/Aboutus.svg";
+
 const StyledSection = styled.div`
   padding: 100px 5vw;
   width: 100%;
   background: no-repeat url(${background});
-  background-color: #1a1a1a;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -81,7 +81,7 @@ const StyledSection = styled.div`
               line-height: 30px;
               text-transform: uppercase;
 
-              color: #ffffff;
+              color: #202020;
             }
             p {
               font-family: Montserrat;
@@ -90,7 +90,8 @@ const StyledSection = styled.div`
               font-size: 20px;
               line-height: 24px;
 
-              color: #ffffff;
+              color: #202020;
+              letter-spacing: -0.06em;
             }
             a {
               text-decoration: none;

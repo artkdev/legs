@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
-import twitter from "../../Assets/twitter.png";
-import discord from "../../Assets/discord.png";
-import opensea from "../../Assets/opensea.png";
+import twitter from "../../Assets/twitter.svg";
+import discord from "../../Assets/discord.svg";
+import opensea from "../../Assets/opensea.svg";
 import logo from "../../Assets/footer logo.jpg";
 
 const StyledFooter = styled.div`
@@ -15,7 +15,7 @@ const StyledFooter = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: black;
+  background: #1a1a1a;
   .bot-text {
     position: absolute;
     font-family: Montserrat Alternates;
@@ -84,14 +84,9 @@ const StyledFooter = styled.div`
             height: 63.86px;
           }
         }
-
-        .link:hover {
-          background: white;
-        }
       }
     }
     .logoBlock {
-      border-left: 4px solid #f0d52d;
       width: 100%;
       display: flex;
       align-items: center;
@@ -132,7 +127,6 @@ const StyledFooter = styled.div`
   @media (max-width: 986px) {
     .wraper {
       .logoBlock {
-        border-top: 4px solid #f0d52d;
         border-left: 0px;
         padding-top: 60px;
         width: 100%;
@@ -160,7 +154,6 @@ const StyledFooter = styled.div`
   @media (max-width: 534px) {
     .wraper {
       .logoBlock {
-        border-top: 4px solid #1b5e2e;
         border-left: 0px;
         padding-top: 60px;
         width: 100%;
@@ -189,7 +182,6 @@ const StyledFooter = styled.div`
   @media (max-width: 360px) {
     .wraper {
       .logoBlock {
-        border-top: 4px solid #1b5e2e;
         border-left: 0px;
         padding-top: 60px;
         width: 100%;
@@ -224,7 +216,7 @@ const FooterText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
+  background: #1a1a1a;
 
   .bot-text {
     font-family: Montserrat Alternates;

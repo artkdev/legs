@@ -2,14 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import JIKITA from "../../Assets/team/2.png";
 import DARKARKI from "../../Assets/team/3.png";
-import GINI from "../../Assets/team/4.png";
 import ARTKDEV from "../../Assets/team/5.png";
 import img1 from "../../Assets/team/1.png";
 import img2 from "../../Assets/team/6.png";
-import background from "../../Assets/team/obj.svg";
-import link from "../../Assets/team/link.png";
-import inst from "../../Assets/team/inst.png";
-import site from "../../Assets/team/Group 5.png";
+import background from "../../Assets/team/Team.svg";
 
 const StyledSection = styled.div`
   padding: 100px 5vw;
@@ -51,7 +47,7 @@ const StyledSection = styled.div`
     justify-content: center;
     gap: 20px;
     .card {
-      background: #f0d52d;
+      background: #1a1a1a;
       width: 252px;
       height: fit-content;
 

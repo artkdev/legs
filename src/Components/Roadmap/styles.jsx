@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "../../Assets/Roadmap/obj.svg";
+import background from "../../Assets/Roadmap/Roadmap.svg";
 export const StyledSection = styled.div`
   padding: 100px 5vw;
   width: 100%;
@@ -69,7 +69,7 @@ export const StyledSection = styled.div`
             line-height: 49px;
             /* identical to box height */
 
-            color: #ffffff;
+            color: #202020;
 
             width: 75px;
             height: 75px;

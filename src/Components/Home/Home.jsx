@@ -1,14 +1,14 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-import background from "../../Assets/Home/obj.svg";
+import background from "../../Assets/Home/Home.svg";
 import preview from "../../Assets/Home/preview.jpg";
 
 const StyledSection = styled.div`
   padding: 100px 5vw;
   width: 100%;
+  min-height: 100vh;
   background: no-repeat url(${background});
-  background-color: #1a1a1a;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -96,7 +96,6 @@ const StyledSection = styled.div`
           min-width: 377px;
           height: 66px;
           background: #f0d52d;
-          border: 2px solid white;
           border-radius: 7px;
           display: flex;
           align-items: center;
@@ -111,7 +110,7 @@ const StyledSection = styled.div`
           letter-spacing: 0.07em;
           text-transform: uppercase;
 
-          color: #ffffff;
+          color: #202020;
 
           margin-bottom: 10px;
         }

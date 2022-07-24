@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import twitter from "../../../Assets/twitter.png";
-import discord from "../../../Assets/discord.png";
-import opensea from "../../../Assets/opensea.png";
+import twitter from "../../../Assets/twitter.svg";
+import discord from "../../../Assets/discord.svg";
+import opensea from "../../../Assets/opensea.svg";
 
 const StyledMobileMenu = styled.div`
   padding: 75px;
@@ -12,7 +12,7 @@ const StyledMobileMenu = styled.div`
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #000000a7;
+  background: #1a1a1a;
   backdrop-filter: blur(15px);
   z-index: 5;
   display: flex;
@@ -38,7 +38,7 @@ const StyledMobileMenu = styled.div`
       color: #ffffff;
     }
     .active {
-      color: #60c77c;
+      color: #ffeb39;
       pointer-events: none;
     }
   }
@@ -101,6 +101,18 @@ export default function MobileMenu({ isOpened, delateSetOpen }) {
           duration={500}
         >
           Collection
+        </Link>
+        <Link
+          onClick={() => delateSetOpen()}
+          className="link"
+          activeClass="active"
+          to="comics_block"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          Comics
         </Link>
         <Link
           onClick={() => delateSetOpen()}
