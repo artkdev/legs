@@ -96,7 +96,6 @@ const StyledSection = styled.div`
           min-width: 377px;
           height: 66px;
           background: #f0d52d;
-          border: 2px solid white;
           border-radius: 7px;
           display: flex;
           align-items: center;
@@ -111,7 +110,7 @@ const StyledSection = styled.div`
           letter-spacing: 0.07em;
           text-transform: uppercase;
 
-          color: #ffffff;
+          color: #202020;
 
           margin-bottom: 10px;
         }

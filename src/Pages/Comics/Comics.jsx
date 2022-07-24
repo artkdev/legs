@@ -14,7 +14,7 @@ import back from "../../Assets/Comics/akar-icons_arrow-up.png";
 import prev from "../../Assets/Comics/prev.png";
 import next from "../../Assets/Comics/next.png";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const comics1 = {
   name: "monkey adventure",
@@ -35,6 +35,10 @@ const comics = [comics1, comics2];
 export default function Comics() {
   const [current, setCurrent] = useState(0);
   const [visibility, setVisibility] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <StyledCompare>

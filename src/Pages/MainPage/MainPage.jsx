@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import AboutUs from "../../Components/AboutUs/AboutUs";
 import Collection from "../../Components/Collection/Collection";
+import ComixBlock from "../../Components/ComicsBlock/ComicsBlock";
 import FAQ from "../../Components/FAQ/FAQ";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
@@ -23,6 +24,7 @@ export default function MainPage() {
       <SidePannel />
       <Home />
       <Collection />
+      <ComixBlock />
       <AboutUs />
       <Roadmap />
       <Team />
