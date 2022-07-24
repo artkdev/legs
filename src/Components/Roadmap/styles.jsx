@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "../../Assets/Roadmap/obj.svg";
+import background from "../../Assets/Roadmap/Roadmap.svg";
 export const StyledSection = styled.div`
   padding: 100px 5vw;
   width: 100%;

@@ -4,13 +4,12 @@ import Document from "../../Assets/About Us/Document.svg";
 import Calendar from "../../Assets/About Us/Calendar.svg";
 import Shopping from "../../Assets/About Us/Shopping.svg";
 import Warning from "../../Assets/About Us/Warning.svg";
-import background from "../../Assets/About Us/obj.svg";
+import background from "../../Assets/About Us/Aboutus.svg";
 
 const StyledSection = styled.div`
   padding: 100px 5vw;
   width: 100%;
   background: no-repeat url(${background});
-  background-color: #1a1a1a;
   background-position: center;
   background-size: cover;
   display: flex;

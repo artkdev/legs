@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import background from "../../Assets/CollectionBack.svg";
+import background from "../../Assets/Collection.svg";
 import img1 from "../../Assets/Carousel/1.png";
 import img2 from "../../Assets/Carousel/2.png";
 import img3 from "../../Assets/Carousel/3.png";
@@ -39,7 +39,6 @@ const StyledSection = styled.div`
   padding-bottom: 100px;
   width: 100%;
   background: no-repeat url(${background});
-  background-color: #1a1a1a;
   background-position: center;
   background-size: cover;
   display: flex;

@@ -1,14 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-import background from "../../Assets/Home/obj.svg";
+import background from "../../Assets/Home/Home.svg";
 import preview from "../../Assets/Home/preview.jpg";
 
 const StyledSection = styled.div`
   padding: 100px 5vw;
   width: 100%;
   background: no-repeat url(${background});
-  background-color: #1a1a1a;
   background-position: center;
   background-size: cover;
   display: flex;

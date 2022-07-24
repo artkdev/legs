@@ -762,7 +762,7 @@ export const StyledHeader = styled.div`
         line-height: 34px;
         text-transform: capitalize;
 
-        color: #ffffff;
+        color: #202020;
 
         text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
       }

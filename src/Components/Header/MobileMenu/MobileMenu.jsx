@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import twitter from "../../../Assets/twitter.png";
-import discord from "../../../Assets/discord.png";
-import opensea from "../../../Assets/opensea.png";
+import twitter from "../../../Assets/twitter.svg";
+import discord from "../../../Assets/discord.svg";
+import opensea from "../../../Assets/opensea.svg";
 
 const StyledMobileMenu = styled.div`
   padding: 75px;

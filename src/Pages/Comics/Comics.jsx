@@ -14,6 +14,8 @@ import back from "../../Assets/Comics/akar-icons_arrow-up.png";
 import prev from "../../Assets/Comics/prev.png";
 import next from "../../Assets/Comics/next.png";
 
+import background from "../../Assets/Home/Home.svg";
+
 import { useEffect, useState } from "react";
 
 const comics1 = {
@@ -81,7 +83,9 @@ const StyledCompare = styled.div`
   padding-top: 30px;
   min-height: 100vh;
   height: fit-content;
-  background-color: #1a1a1a;
+  background: no-repeat url(${background});
+  background-position: center;
+  background-size: cover;
   position: relative;
   padding: 40px 100px;
   .content {
@@ -127,7 +131,7 @@ const StyledHeader = styled.div`
         line-height: 34px;
         text-transform: capitalize;
 
-        color: #ffffff;
+        color: #202020;
 
         text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
       }

@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import background from "../../Assets/CimicsBlock/comics.svg";
 
 export const StyledComixBlock = styled.section`
   padding: 100px 5vw;
   padding-bottom: 100px;
   width: 100%;
-  background-color: #1a1a1a;
+  background: no-repeat url(${background});
   background-position: center;
   background-size: cover;
   display: flex;
