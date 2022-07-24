@@ -17,6 +17,22 @@ import img13 from "../../Assets/Carousel/13.png";
 import img14 from "../../Assets/Carousel/14.png";
 import img15 from "../../Assets/Carousel/15.png";
 import img16 from "../../Assets/Carousel/16.png";
+import img17 from "../../Assets/Carousel/17.png";
+import img18 from "../../Assets/Carousel/18.png";
+import img19 from "../../Assets/Carousel/19.png";
+import img20 from "../../Assets/Carousel/20.png";
+import img21 from "../../Assets/Carousel/21.png";
+import img22 from "../../Assets/Carousel/22.png";
+import img23 from "../../Assets/Carousel/23.png";
+import img24 from "../../Assets/Carousel/24.png";
+import img25 from "../../Assets/Carousel/25.png";
+import img26 from "../../Assets/Carousel/26.png";
+import img27 from "../../Assets/Carousel/27.png";
+import img28 from "../../Assets/Carousel/28.png";
+import img29 from "../../Assets/Carousel/29.png";
+import img30 from "../../Assets/Carousel/30.png";
+import img31 from "../../Assets/Carousel/31.png";
+import img32 from "../../Assets/Carousel/32.png";
 import { NavLink } from "react-router-dom";
 
 const StyledSection = styled.div`
@@ -52,11 +68,11 @@ const StyledSection = styled.div`
     overflow: hidden;
     .carouselInner {
       position: absolute;
-      width: 4576px; //pictures * (pictures wigth + gap)
+      width: 9152px; //pictures * (pictures wigth + gap)
       display: flex;
       flex-direction: row;
       animation-name: move_left;
-      animation-duration: 60s;
+      animation-duration: 120s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
       gap: 50px;
@@ -132,7 +148,7 @@ const StyledSection = styled.div`
       margin-top: 40px;
       height: 167px;
       .carouselInner {
-        width: 2992px; //pictures * (pictures wigth + gap)
+        width: 5984; //pictures * (pictures wigth + gap)
         gap: 20px;
         img {
           width: 167px;
@@ -165,7 +181,7 @@ const StyledSection = styled.div`
       margin-top: 20px;
       height: 137px;
       .carouselInner {
-        width: 2512px; //pictures * (pictures wigth + gap)
+        width: 5024px; //pictures * (pictures wigth + gap)
         gap: 20px;
         img {
           width: 137px;
@@ -193,7 +209,7 @@ const StyledSection = styled.div`
       margin-top: 20px;
       height: 107px;
       .carouselInner {
-        width: 2140px; //pictures * (pictures wigth + gap)
+        width: 4280px; //pictures * (pictures wigth + gap)
         gap: 20px;
         img {
           width: 107px;
@@ -238,6 +254,22 @@ export default function Collection() {
           <img src={img14} alt="" />
           <img src={img15} alt="" />
           <img src={img16} alt="" />
+          <img src={img17} alt="" />
+          <img src={img18} alt="" />
+          <img src={img19} alt="" />
+          <img src={img20} alt="" />
+          <img src={img21} alt="" />
+          <img src={img22} alt="" />
+          <img src={img23} alt="" />
+          <img src={img24} alt="" />
+          <img src={img25} alt="" />
+          <img src={img26} alt="" />
+          <img src={img27} alt="" />
+          <img src={img28} alt="" />
+          <img src={img29} alt="" />
+          <img src={img30} alt="" />
+          <img src={img31} alt="" />
+          <img src={img32} alt="" />
           <img src={img1} alt="" />
           <img src={img2} alt="" />
           <img src={img3} alt="" />
@@ -254,6 +286,22 @@ export default function Collection() {
           <img src={img14} alt="" />
           <img src={img15} alt="" />
           <img src={img16} alt="" />
+          <img src={img17} alt="" />
+          <img src={img18} alt="" />
+          <img src={img19} alt="" />
+          <img src={img20} alt="" />
+          <img src={img21} alt="" />
+          <img src={img22} alt="" />
+          <img src={img23} alt="" />
+          <img src={img24} alt="" />
+          <img src={img25} alt="" />
+          <img src={img26} alt="" />
+          <img src={img27} alt="" />
+          <img src={img28} alt="" />
+          <img src={img29} alt="" />
+          <img src={img30} alt="" />
+          <img src={img31} alt="" />
+          <img src={img32} alt="" />
         </div>
       </div>
       <h2>Find a match for your NFT or try different combinations!</h2>

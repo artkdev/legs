@@ -69,7 +69,7 @@ export const StyledSection = styled.div`
             line-height: 49px;
             /* identical to box height */
 
-            color: #ffffff;
+            color: #202020;
 
             width: 75px;
             height: 75px;

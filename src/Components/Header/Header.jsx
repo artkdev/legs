@@ -10,7 +10,7 @@ const StyledHeader = styled.div`
   position: fixed;
   width: 100%;
   height: 100px;
-  background: black;
+  background: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;

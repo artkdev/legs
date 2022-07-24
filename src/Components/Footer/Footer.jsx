@@ -15,7 +15,7 @@ const StyledFooter = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: black;
+  background: #1a1a1a;
   .bot-text {
     position: absolute;
     font-family: Montserrat Alternates;

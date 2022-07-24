@@ -12,7 +12,7 @@ const StyledMobileMenu = styled.div`
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #000000a7;
+  background: #1a1a1a;
   backdrop-filter: blur(15px);
   z-index: 5;
   display: flex;

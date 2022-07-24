@@ -5,6 +5,7 @@ import Calendar from "../../Assets/About Us/Calendar.svg";
 import Shopping from "../../Assets/About Us/Shopping.svg";
 import Warning from "../../Assets/About Us/Warning.svg";
 import background from "../../Assets/About Us/obj.svg";
+
 const StyledSection = styled.div`
   padding: 100px 5vw;
   width: 100%;
@@ -81,7 +82,7 @@ const StyledSection = styled.div`
               line-height: 30px;
               text-transform: uppercase;
 
-              color: #ffffff;
+              color: #202020;
             }
             p {
               font-family: Montserrat;
@@ -90,7 +91,7 @@ const StyledSection = styled.div`
               font-size: 20px;
               line-height: 24px;
 
-              color: #ffffff;
+              color: #202020;
             }
             a {
               text-decoration: none;

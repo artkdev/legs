@@ -51,7 +51,7 @@ const StyledSection = styled.div`
     justify-content: center;
     gap: 20px;
     .card {
-      background: #f0d52d;
+      background: #1a1a1a;
       width: 252px;
       height: fit-content;
 
