@@ -218,7 +218,7 @@ const FooterText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
+  background: #1a1a1a;
 
   .bot-text {
     font-family: Montserrat Alternates;

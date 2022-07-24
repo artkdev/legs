@@ -7,6 +7,7 @@ import preview from "../../Assets/Home/preview.jpg";
 const StyledSection = styled.div`
   padding: 100px 5vw;
   width: 100%;
+  min-height: 100vh;
   background: no-repeat url(${background});
   background-position: center;
   background-size: cover;
